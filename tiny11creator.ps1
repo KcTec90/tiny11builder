@@ -22,17 +22,17 @@ $yes = (cmd /c "choice <nul 2>nul")[1]
 md $rootWorkdir | Out-Null
 md ($toolsFolder + "WindowsIsoDownloader\") | Out-Null
 
-Write-Output "Downloading WindowsIsoDownloader release from GitHub..."
-Invoke-WebRequest -Uri $windowsIsoDownloaderReleaseUrl -OutFile WindowsIsoDownloader.zip
-Write-Output "Extracting WindowsIsoDownloader release..."
-Expand-Archive -Path WindowsIsoDownloader.zip -DestinationPath ($toolsFolder + "WindowsIsoDownloader\")
-Remove-Item WindowsIsoDownloader.zip | Out-Null
+# Write-Output "Downloading WindowsIsoDownloader release from GitHub..."
+# Invoke-WebRequest -Uri $windowsIsoDownloaderReleaseUrl -OutFile WindowsIsoDownloader.zip
+# Write-Output "Extracting WindowsIsoDownloader release..."
+# Expand-Archive -Path WindowsIsoDownloader.zip -DestinationPath ($toolsFolder + "WindowsIsoDownloader\")
+# Remove-Item WindowsIsoDownloader.zip | Out-Null
 
 #Downloading the Windows 11 ISO using WindowsIsoDownloader
-Write-Output "Downloading Windows 11 iso file from Microsoft using WindowsIsoDownloader..."
-$isoDownloadProcess = (Start-Process ($toolsFolder + "WindowsIsoDownloader\WindowsIsoDownloader.exe") -NoNewWindow -Wait -WorkingDirectory ($toolsFolder + "WindowsIsoDownloader\") -PassThru)
+#Write-Output "Downloading Windows 11 iso file from Microsoft using WindowsIsoDownloader..."
+$isoDownloadProcess = 32
 
-if ($isoDownloadProcess.ExitCode -eq 0) {
+if ($isoDownloadProcess -eq 32) {
 	#Mount the Windows 11 ISO
 	Write-Output "Mounting the original iso..."
 	$mountResult = Mount-DiskImage -ImagePath $isoPath
