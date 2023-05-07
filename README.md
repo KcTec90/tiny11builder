@@ -1,6 +1,6 @@
 # tiny11builder, PowerShell edition
 
-This repository contains a PowerShell rewrite of the original, batch written, ntdevlabs/tiny11builder repository.
+This repository contains a PowerShell rewrite of the original, batch written, ntdevlabs/tiny11builder repository. This also contains a fix for using your own iso!
 
 This script will:
 * download the latest Windows 11 iso from Microsoft.
@@ -18,6 +18,7 @@ Also included is autounattend.xml file:
 # Run it
 
 1. Download this repository as zip and unzip it where you want.
+1b. MAKE A FOLDER IN C:\ CALLED "tiny11" or else this may not work!
 2. Open a Powershell as administrator, go to the extraction path, and run the following commands:
 ```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
