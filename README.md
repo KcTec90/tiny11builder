@@ -1,4 +1,5 @@
 # tiny11builder, PowerShell edition
+[not working on this]
 
 This repository contains a PowerShell rewrite of the original, batch written, ntdevlabs/tiny11builder repository. This also contains a fix for using your own iso!
 
